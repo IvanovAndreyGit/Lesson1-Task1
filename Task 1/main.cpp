@@ -30,11 +30,19 @@ int main() {
             fin >> arr2[s];
         }
 
-        for (int s = 1; s < j; s++)
+       //============================
+
+        std::cout << arr2[j-1] << " ";
+
+        for (int s = 0; s < j - 1; s++)
         {
             std::cout << arr2[s] << " ";
         }
-        std::cout << arr2[0] << std::endl;
+        
+        std::cout << std::endl;
+        //std::cout << arr2[0] << std::endl;
+
+        //============================
 
         std::cout << i << std::endl;
         for (int s = 1; s < i; s++)
@@ -43,6 +51,7 @@ int main() {
         }
         std::cout << arr1[0] << std::endl;
 
+        //============================
 
         fin.close();
         delete[] arr1;

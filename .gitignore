@@ -31,3 +31,5 @@
 *.out
 *.app
 *.opendb
+/x64
+/Task\ 1/64
