@@ -40,8 +40,7 @@ int main() {
         }
         
         std::cout << std::endl;
-        //std::cout << arr2[0] << std::endl;
-
+        
         //============================
 
         std::cout << i << std::endl;
