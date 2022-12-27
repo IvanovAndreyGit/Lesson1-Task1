@@ -32,4 +32,4 @@
 *.app
 *.opendb
 /x64
-/Task\ 1/x64
+/Task\ 1/x64/*
