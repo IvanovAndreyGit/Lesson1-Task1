@@ -1,5 +1,3 @@
-// Task 1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
 #include <fstream>
@@ -8,26 +6,48 @@ int main() {
     setlocale(LC_ALL, "Russian");
 
     std::ifstream fin("in1.txt");
-
     if (fin.is_open())
     {
+       
+        int i;
+        int j;
 
-        std::string str;
-        while (!(fin >> str).eof())
+        fin >> i;
+        int* arr1 = new int[i];
+
+        
+        for (int s = 0; s < i; s++)
         {
-            std::cout << str << std::endl;
+            fin >> arr1[s];
         }
+     
+        fin >> j;
+        int* arr2 = new int[j];
+
+        std::cout << j << std::endl;
+        for (int s = 0; s < j; s++)
+        {
+            fin >> arr2[s];
+        }
+
+        for (int s = 1; s < j; s++)
+        {
+            std::cout << arr2[s] << " ";
+        }
+        std::cout << arr2[0] << std::endl;
+
+        std::cout << i << std::endl;
+        for (int s = 1; s < i; s++)
+        {
+            std::cout << arr1[s] << " ";
+        }
+        std::cout << arr1[0] << std::endl;
+
+
         fin.close();
+        delete[] arr1;
+        delete[] arr2;
+        return 0;
     }
+    
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
